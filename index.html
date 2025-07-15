@@ -36,11 +36,12 @@
   <title>CONFER - Auditorias e Consultoria</title>
   <style>
 
-     #whatsapp-button {
+     /* Estilos comuns para os botões fixos */
+  #whatsapp-button,
+  #linkedin-button {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    background-color: #25D366;
+    background-color: white;
     border-radius: 50%;
     padding: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -51,26 +52,50 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
+  /* WhatsApp */
+  #whatsapp-button {
+    bottom: 20px;
+    background-color: #25D366;
+  }
   #whatsapp-button:hover {
     background-color: #1ebe5d;
     transform: scale(1.05);
   }
-
   #whatsapp-button img {
     display: block;
     width: 32px;
     height: 32px;
   }
 
+  /* LinkedIn */
+  #linkedin-button {
+    bottom: 80px; /* 20px + 32px ícone + 12px padding + 16px espaço */
+    background-color: #0077b5;
+  }
+  #linkedin-button:hover {
+    background-color: #005983;
+    transform: scale(1.05);
+  }
+  #linkedin-button img {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Responsividade */
   @media (max-width: 600px) {
-    #whatsapp-button {
-      bottom: 15px;
+    #whatsapp-button,
+    #linkedin-button {
       right: 15px;
       padding: 10px;
     }
-    #whatsapp-button img {
+    #whatsapp-button img,
+    #linkedin-button img {
       width: 28px;
       height: 28px;
+    }
+    #linkedin-button {
+      bottom: 75px;
     }
   }
     
@@ -307,7 +332,12 @@
 
 <!-- Botão WhatsApp fixo -->
 <a href="https://wa.me/351913188505" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp" id="whatsapp-button">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32" />
+</a>
+
+<!-- Botão LinkedIn fixo -->
+<a href="https://www.linkedin.com/in/seu-usuario/" target="_blank" rel="noopener" aria-label="Perfil LinkedIn" id="linkedin-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="32" height="32" />
 </a>
 
 </body>
